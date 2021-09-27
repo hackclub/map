@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon -r dotenv/config server.js"
   },
   "dependencies": {
     "airtable": "^0.11.1",

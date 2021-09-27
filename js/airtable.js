@@ -1,8 +1,5 @@
 import Bottleneck from 'bottleneck';
 import Airtable from "airtable";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 const limiter = new Bottleneck({
   maxConcurrent: 3,

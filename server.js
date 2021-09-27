@@ -1,8 +1,5 @@
 import express from "express";
-import dotenv from "dotenv";
 import airtableHelperFactory from "./js/airtable.js";
-
-dotenv.config();
 
 const app = express();
 const port = 3000;
