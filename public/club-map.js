@@ -16,10 +16,12 @@ const onConnected = host => {
       }).addTo(map);
 
   (async () => {
-    let clubs = await fetch(`/clubs`).then(res => res.json());
-    clubs.forEach(x => {
+    let clubs = await fetch(`https://api2.hackclub.com/v0.1/Club Applications/Clubs Dashboard`).then(res => res.json());
+    clubs.forEach(({ fields: x }) => {
+        if (!(x?.Latitude &&  x?.Longitude)) return;
+
         let marker = new L.marker([ x.Latitude, x.Longitude ]).addTo(map);
-        marker.bindPopup(`<b>${x.Venue}</b>`)
+        marker.bindPopup(`<b>${x?.Venue}</b>`)
       })
 
   })()
