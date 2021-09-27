@@ -1,4 +1,4 @@
-import { html, render, makeComponent } from './js/makeComponent.js';
+import { html, render, makeComponent } from './makeComponent.js';
 
 const onConstruct = host => {
   const state = {};
