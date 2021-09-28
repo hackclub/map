@@ -20,7 +20,17 @@ const onConnected = host => {
     clubs.forEach(({ fields: x }) => {
         if (!(x?.Latitude &&  x?.Longitude)) return;
 
-        let marker = new L.marker([ x.Latitude, x.Longitude ]).addTo(map);
+        const style = `
+          transform: translate(-12px) scale(.1);
+          transform-origin: left top;
+        `
+
+        const icon = new L.divIcon({
+          html: `<img style="${style}" src="https://assets.hackclub.com/flag-standalone.svg"/>`,
+          className: "clear"
+        });
+
+        let marker = new L.marker([ x.Latitude, x.Longitude ], { icon }).addTo(map);
         marker.bindPopup(`<b>${x?.Venue}</b>`)
       })
 
