@@ -1,4 +1,4 @@
-import { render, html, svg } from 'https://cdn.skypack.dev/uhtml';
+import { render, html, svg } from 'https://unpkg.com/uhtml';
 
 export { render, html, svg };
 
