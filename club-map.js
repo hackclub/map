@@ -21,12 +21,13 @@ const onConnected = host => {
         if (!(x?.Latitude &&  x?.Longitude)) return;
 
         const style = `
-          transform: translate(-12px) scale(.1);
           transform-origin: left top;
+          height: 20px;
+          border-radius: 50%;
         `
 
         const icon = new L.divIcon({
-          html: `<img style="${style}" src="https://assets.hackclub.com/flag-standalone.svg"/>`,
+          html: `<img style="${style}" src="https://assets.hackclub.com/icon-rounded.png"/>`,
           className: "clear"
         });
 
@@ -47,7 +48,13 @@ const styles = html`
   <style>
     #leaflet-map {
       width: 100%;
-      height: 600px;
+      height: 100vh;
+    }
+    .leaflet-container{
+      font-family: 'Phantom Sans';
+    }
+    .leaflet-popup-close-button{
+      display: none;
     }
   </style>
 `

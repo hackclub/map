@@ -4,10 +4,82 @@
   <link rel="stylesheet" href="./lib/leaflet.css" />
   <script src="./lib/leaflet.js"></script>
   <script type="module" src="./club-map.js"></script>
+  <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hack Club" />
+    <meta name="twitter:site" content="@hackclub" />
+    <title>Clubs Map – Hack Club</title>
+    <meta property="og:title" content="Clubs Map – Hack Club" />
+    <meta name="twitter:title" content="Clubs Map – Hack Club" />
+    <meta
+      name="description"
+      content="Browse all the high school coding clubs in the global Hack Club network."
+    />
+    <meta
+      property="og:description"
+      content="Browse all the high school coding clubs in the global Hack Club network."
+    />
+    <meta
+      name="twitter:description"
+      content="Browse all the high school coding clubs in the global Hack Club network."
+    />
+    <meta
+      property="og:image"
+      content="https://cloud-5s4fkhvsr.vercel.app/2020-07-25_460dgyn7ge8y6e0ddwd3ywwnkdf93v2f.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://cloud-5s4fkhvsr.vercel.app/2020-07-25_460dgyn7ge8y6e0ddwd3ywwnkdf93v2f.png"
+    />
+    <meta name="theme-color" content="#ec3750" />
+    <meta name="msapplication-TileColor" content="#ec3750" />
 </head>
 <body>
+  <div style="position: absolute; bottom: 10px; left: 10px; color: white; z-index: 999; background: #ec3750; padding: 20px 20px; border-radius: 16px; margin-right: 10px;">
+    <h2 style="margin-block-start: 0em; margin-block-end: 0em;">The Hack Club Map</h2>
+    <p style="margin-block-start: 0.4em; margin-block-end: 0em;">To be added message <b>@leo</b> (the Americas & Europe) or <b>@Harsh Bajpai</b> (APAC & Africa) on Slack.</p>
+  </div>
   <club-map></club-map>
-  <p>If you think you should be on here but aren't message @leo on Slack or @Harsh Bajpai if you are in the APAC region.</p>
+  
+  <style>
+    @font-face {
+      font-family: 'Phantom Sans';
+      src: url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff')
+          format('woff'),
+        url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff2')
+          format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Phantom Sans';
+      src: url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff')
+          format('woff'),
+        url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Italic.woff2')
+          format('woff2');
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Phantom Sans';
+      src: url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff')
+          format('woff'),
+        url('https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff2')
+          format('woff2');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+    body{
+      font-family: 'Phantom Sans';
+      margin: 0;
+      background: #000 !important;
+    }
+  </style>
 </body>
 </html>
 
