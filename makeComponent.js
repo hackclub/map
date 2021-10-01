@@ -1,4 +1,4 @@
-import { render, html, svg } from 'https://unpkg.com/uhtml';
+import { render, html, svg } from '/lib/uhtml.js';
 
 export { render, html, svg };
 
