@@ -23,7 +23,7 @@ const onConnected = host => {
         const style = `
           transform-origin: left top;
           height: 20px;
-          filter: invert(100%) hue-rotate(180deg) brightness(100%) contrast(100%);
+          border-radius: 50%;
         `
 
         const icon = new L.divIcon({
@@ -49,8 +49,6 @@ const styles = html`
     #leaflet-map {
       width: 100%;
       height: 100vh;
-      filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
-      background: #000 !important;
     }
     .leaflet-container{
       font-family: 'Phantom Sans';
