@@ -41,6 +41,7 @@
     <h2 style="margin-block-start: 0em; margin-block-end: 0em;">The Hack Club Map</h2>
     <p style="margin-block-start: 0.4em; margin-block-end: 0em;">To be added message <b>@leo</b> (the Americas & Europe) or <b>@Harsh Bajpai</b> (APAC & Africa) on Slack.</p>
   </div>
+  <a class="flag" href="https://hackclub.com/" alt="Hack Club"></a>
   <club-map></club-map>
   
   <style>
@@ -74,10 +75,68 @@
       font-style: normal;
       font-display: swap;
     }
-    body{
+    body {
       font-family: 'Phantom Sans';
       margin: 0;
       background: #000 !important;
+    }
+    .flag {
+      background-image: url(https://assets.hackclub.com/flag-orpheus-top.svg);
+      position: absolute; 
+      top: 0; 
+      left: 10px; 
+      border: 0; 
+      width: 112px; 
+      z-index: 999;
+      background-repeat: no-repeat;
+      -webkit-background-position: top left;
+      background-position: top left;
+      -webkit-background-size: contain;
+      background-size: contain;
+      cursor: pointer;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      width: 112px;
+      height: 48px;
+      -webkit-transition: 0.1875s cubic-bezier(0.375, 0, 0.675, 1) -webkit-transform;
+      transition: 0.1875s cubic-bezier(0.375, 0, 0.675, 1) transform;
+      transform-origin: top left;
+    }
+
+    @media (min-width: 48em) {
+      .flag {
+          width:172px;
+          height: 64px;
+      }
+    }
+
+    .flag:hover,.flag:focus {
+      -webkit-animation: animation-flag 0.5s linear infinite alternate;
+      animation: animation-flag 0.5s linear infinite alternate;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .flag {
+        -webkit-animation: none!important;
+        animation: none!important;
+      }
+    }
+
+    @keyframes animation-flag {
+      from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      to {
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+      }
     }
   </style>
 </body>
