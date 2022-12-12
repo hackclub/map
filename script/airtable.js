@@ -1,7 +1,7 @@
 import Bottleneck from 'bottleneck';
 import Airtable from "airtable";
 
-if (process.env.NODE_ENV !== "production" ) {
+if (!secrets) {
   await import("./SECRETS.js");
 }
 

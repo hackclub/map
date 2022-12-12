@@ -1,6 +1,6 @@
 import Bottleneck from 'bottleneck';
 
-if (process.env.NODE_ENV !== "production" ) {
+if (!secrets) {
   await import("./SECRETS.js");
 }
 
