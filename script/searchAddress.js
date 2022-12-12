@@ -1,5 +1,4 @@
 import Bottleneck from 'bottleneck';
-import fetch from "node-fetch";
 
 if (process.env.NODE_ENV !== "production" ) {
   await import("./SECRETS.js");
