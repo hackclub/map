@@ -1,8 +1,14 @@
 import Bottleneck from 'bottleneck';
 import Airtable from "airtable";
 
-if (typeof secrets !== 'undefined') {
+try {
   await import("./SECRETS.js");
+} catch (err) {
+  global.secrets = {
+    "AIRTABLE": process.env.AIRTABLE,
+    "GOOGLE_MAP_API": process.env.GOOGLE_MAP_API,
+    "baseID": process.env.baseID
+  }
 }
 
 const limiter = new Bottleneck({
