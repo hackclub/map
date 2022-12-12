@@ -1,4 +1,5 @@
 import { html, render, makeComponent } from './makeComponent.js';
+import L from "leaflet";
 
 const onConstruct = host => {
   const state = {};
