@@ -58,7 +58,7 @@ typings/
 .env
 
 # dotenv environment variables file
-# script/SECRETS.js
+script/SECRETS.js
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -77,3 +77,4 @@ typings/
 
 # FuseBox cache
 .fusebox/
+script/SECRETS.js
