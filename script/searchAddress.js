@@ -1,4 +1,5 @@
 import Bottleneck from 'bottleneck';
+import fetch from "node-fetch";
 
 try {
   await import("./SECRETS.js");

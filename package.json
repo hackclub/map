@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "airtable": "^0.11.6",
-    "bottleneck": "^2.19.5"
+    "bottleneck": "^2.19.5",
+    "node-fetch": "^3.3.0"
   },
   "devDependencies": {
     "vite": "^4.0.0"
