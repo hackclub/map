@@ -1,6 +1,10 @@
 name: Update Map on a CRON Schedule
 
 on:
+  push:
+    branches:
+      - main
+
   schedule:
     # Runs "at minute x past every hour" (see https://crontab.guru)
     - cron: '* * * * *'
