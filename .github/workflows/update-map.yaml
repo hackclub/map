@@ -12,4 +12,4 @@ jobs:
       - name: update map
         run: |
           npm install
-          node add-lat-long
+          npm run add-lat-long
