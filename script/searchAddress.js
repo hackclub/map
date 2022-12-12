@@ -7,14 +7,14 @@ const limiter = new Bottleneck({
 })
 
 export const searchAddress = async (address) => {
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.GOOGLE_MAP_API}`
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${secrets.GOOGLE_MAP_API}`
     const json = await fetch(url).then( res => res.json() );
     
     return json.results.length > 0 ? json.results[0] : [];
 }
 
 export const searchLatLong = async (address) => {
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.GOOGLE_MAP_API}`
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${secrets.GOOGLE_MAP_API}`
     const json = await fetch(url).then( res => res.json() );
     
     let lat = 0;

@@ -6,7 +6,7 @@ const limiter = new Bottleneck({
   minTime: 500
 })
 
-const base = await new Airtable({ apiKey: process.env.AIRTABLE }).base(process.env.baseID);
+const base = await new Airtable({ apiKey: secrets.AIRTABLE }).base(secrets.baseID);
 
 export default function airtableHelperFactory(table, view) {
   const get = async (search = "") => {

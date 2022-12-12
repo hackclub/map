@@ -1,3 +1,4 @@
+import "./SECRETS.js";
 import { searchAddress, searchLatLong } from "./searchAddress.js";
 import airtableHelperFactory from "./airtable.js";
 
