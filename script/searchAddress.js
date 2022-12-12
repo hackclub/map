@@ -1,6 +1,10 @@
 import Bottleneck from 'bottleneck';
 import fetch from "node-fetch";
 
+if (process.env.NODE_ENV !== "production" ) {
+  await import("./SECRETS.js");
+}
+
 const limiter = new Bottleneck({
   maxConcurrent: 1,
   minTime: 1000
