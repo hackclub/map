@@ -1,6 +1,8 @@
 import { searchAddress, searchLatLong } from "./searchAddress.js";
 import airtableHelperFactory from "./airtable.js";
 
+console.log("Adding clubs locations.");
+
 const sleep = m => new Promise(r => setTimeout(r, m))
 
 const { get, update } = airtableHelperFactory("Clubs Dashboard", "Main");
@@ -8,7 +10,11 @@ const { get, update } = airtableHelperFactory("Clubs Dashboard", "Main");
 const all = await get();
 
 for (const club of all) {
-	if (!club.fields["Location"] || club.fields["Location"] === "" || club.fields["Latitude"]) continue;
+	if (
+		!club.fields["Location"] 
+		|| club.fields["Location"] === "" 
+		|| club.fields["Latitude"]
+	) continue;
 	const locationString = club.fields["Location"];
 	const [ Latitude, Longitude ] = await searchLatLong(locationString);
 	if (Latitude == 0 && Longitude == 0) continue;
