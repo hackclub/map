@@ -1,6 +1,6 @@
 import Bottleneck from 'bottleneck';
 
-if (!secrets) {
+if (typeof secrets !== 'undefined') {
   await import("./SECRETS.js");
 }
 

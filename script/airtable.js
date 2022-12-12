@@ -1,7 +1,7 @@
 import Bottleneck from 'bottleneck';
 import Airtable from "airtable";
 
-if (!secrets) {
+if (typeof secrets !== 'undefined') {
   await import("./SECRETS.js");
 }
 
