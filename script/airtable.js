@@ -1,6 +1,10 @@
 import Bottleneck from 'bottleneck';
 import Airtable from "airtable";
 
+if (process.env.NODE_ENV !== "production" ) {
+  await import("./SECRETS.js");
+}
+
 const limiter = new Bottleneck({
   maxConcurrent: 3,
   minTime: 500
