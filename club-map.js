@@ -21,6 +21,7 @@ const onConnected = host => {
   (async () => {
     let clubs = await fetch(`https://api2.hackclub.com/v0.1/Club Applications/Clubs Dashboard`).then(res => res.json());
     clubs.forEach(({ fields: x }) => {
+        if (!x.Status || x.Status === "inactive") return;
         if (!(x?.Latitude &&  x?.Longitude)) return;
 
         const style = `
