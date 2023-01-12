@@ -12,7 +12,8 @@
     "airtable": "^0.11.6",
     "bottleneck": "^2.19.5",
     "leaflet": "^1.9.3",
-    "node-fetch": "^3.3.0"
+    "node-fetch": "^3.3.0",
+    "uhtml": "^3.1.0"
   },
   "devDependencies": {
     "vite": "^4.0.0"
