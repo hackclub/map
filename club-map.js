@@ -121,7 +121,7 @@ const onConnected = (host) => {
       layout: {
         "icon-image": "hackclub",
 
-        // icon pixel size is 512x512 so we scale it by
+        // icon size is 512x512 px so we scale it by
         // 20/512 to make it appear 20x20 px instead
         "icon-size": 0.0390625,
 
