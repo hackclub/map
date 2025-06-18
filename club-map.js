@@ -122,6 +122,8 @@ const onConnected = (host) => {
       source: "clubs",
       layout: {
         "icon-image": "hackclub",
+        "icon-anchor": "center",
+        "icon-offset": [128, 128],
 
         // icon size is 512x512 px so we scale it by
         // 20/512 to make it appear 20x20 px instead
