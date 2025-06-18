@@ -84,7 +84,7 @@ const onConnected = (host) => {
     const features = clubs
       .filter(({ fields: x }) =>
         // Filter out all clubs that are inactive 
-        (x.status !== "inactive") &&
+        (x.Status && x.Status !== "inactive") &&
 
         // Or don't have a latitude / longitude
         (x.Latitude && x.Longitude)
