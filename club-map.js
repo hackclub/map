@@ -68,7 +68,7 @@ const onConnected = (host) => {
 
   map.on('load', async () => {
 
-    // Add loading spinner, remove it later
+    // Add loading indicator, remove it later
     const loading = new LoadingControl();
     map.addControl(loading, "top-right");
 
