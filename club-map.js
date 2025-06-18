@@ -170,7 +170,7 @@ const onConnected = (host) => {
 const styles = html`
   <link
     rel="stylesheet"
-    href="/maplibre-gl.css"
+    href="maplibre-gl.css"
     crossorigin=""
   />
   <style>
