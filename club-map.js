@@ -57,6 +57,8 @@ const onConnected = (host) => {
     // and rotating it
     dragRotate: false,
 
+    center: [0, 30.683],
+
     zoom: 1,
     canvasContextAttributes: { antialias: true }
   });
