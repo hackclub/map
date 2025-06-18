@@ -32,6 +32,8 @@ body {
   font-family: 'Phantom Sans';
   margin: 0;
   background: #000 !important;
+  width: 100vw;
+  height: 100vh;
 }
 .flag {
   background-image: url(https://assets.hackclub.com/flag-orpheus-top.svg);
