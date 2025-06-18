@@ -1,5 +1,4 @@
 import { html, render, makeComponent } from "./makeComponent.js";
-// import L from "leaflet";
 import maplibregl from 'maplibre-gl';
 
 const onConstruct = (host) => {
