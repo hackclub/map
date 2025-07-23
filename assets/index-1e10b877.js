@@ -5,7 +5,7 @@
           transform-origin: left top;
           height: 20px;
           border-radius: 50%;
-        `,v=new $t.divIcon({html:`<img style="${m}" src="https://assets.hackclub.com/icon-rounded.png"/>`,className:"clear"});new $t.marker([f.Latitude,f.Longitude],{icon:v}).addTo(a).bindPopup(`<b>${f==null?void 0:f.Venue}</b>`)}))()},er=hi`
+        `,v=new $t.divIcon({html:`<img style="${m}" src="https://assets.hackclub.com/icon-rounded.png"/>`,className:"clear"});new $t.marker([f.Latitude,f.Longitude],{icon:v}).addTo(a).bindPopup(`<b>${f==null?void 0:f["Club Name"]}</b>`)}))()},er=hi`
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
