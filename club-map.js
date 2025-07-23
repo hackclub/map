@@ -49,7 +49,7 @@ const onConnected = (host) => {
       });
 
       let marker = new L.marker([x.Latitude, x.Longitude], { icon }).addTo(map);
-      marker.bindPopup(`<b>${x?.Venue}</b>`);
+      marker.bindPopup(`<b>${x?.["Club Name"]}</b>`);
     });
   })();
 };
