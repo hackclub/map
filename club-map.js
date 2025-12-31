@@ -31,11 +31,11 @@ const onConnected = (host) => {
 
   (async () => {
     let clubs = await fetch(
-      `https://api2.hackclub.com/v0.1/Club Applications/Clubs Dashboard`
+      `https://api2.hackclub.com/v0.1/Club%20Map/Clubs`
     ).then((res) => res.json());
     clubs.forEach(({ fields: x }) => {
-      if (!x.Status || x.Status === "inactive") return;
-      if (!(x?.Latitude && x?.Longitude)) return;
+      if (!x.club_status || x.club_status !== "Active") return;
+      if (!(x?.venue_lat_fuzz && x?.venue_lng_fuzz)) return;
 
       const style = `
           transform-origin: left top;
@@ -48,8 +48,8 @@ const onConnected = (host) => {
         className: "clear",
       });
 
-      let marker = new L.marker([x.Latitude, x.Longitude], { icon }).addTo(map);
-      marker.bindPopup(`<b>${x?.["Club Name"]}</b>`);
+      let marker = new L.marker([x.venue_lat_fuzz, x.venue_lng_fuzz], { icon }).addTo(map);
+      marker.bindPopup(`<b>${x?.club_name}</b>`);
     });
   })();
 };
