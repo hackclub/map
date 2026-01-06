@@ -31,7 +31,7 @@ const onConnected = (host) => {
 
   (async () => {
     let clubs = await fetch(
-      `https://api2.hackclub.com/v0.1/Club%20Map/Clubs`
+      `https://clubapi.hackclub.com/clubs/map`
     ).then((res) => res.json());
     clubs.forEach(({ fields: x }) => {
       if (!x.club_status || x.club_status !== "Active") return;
