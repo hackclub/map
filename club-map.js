@@ -7,22 +7,49 @@ const onConstruct = (host) => {
   host.useState(state);
 };
 
+const parseHashParams = () => {
+  const hash = window.location.hash.slice(1);
+  if (!hash) return null;
+  const params = new URLSearchParams(hash);
+  const lat = parseFloat(params.get("lat"));
+  const lng = parseFloat(params.get("lng"));
+  const zoom = parseInt(params.get("z"), 10);
+  if (!isNaN(lat) && !isNaN(lng)) {
+    return { lat, lng, zoom: isNaN(zoom) ? 10 : zoom };
+  }
+  return null;
+};
+
+const updateHash = (lat, lng, zoom) => {
+  const hash = `lat=${lat.toFixed(4)}&lng=${lng.toFixed(4)}&z=${zoom}`;
+  window.history.replaceState(null, null, `#${hash}`);
+};
+
 const onConnected = (host) => {
   const el = host.shadowRoot.querySelector("#leaflet-map");
 
+  const hashParams = parseHashParams();
+  const defaultCenter = [30.683, 9.099];
+  const defaultZoom = 2;
+
   const map = L.map(el, {
     drawControl: true,
-    zoomControl: false, // Disable default zoom control
-    center: [30.683, 9.099], // Set initial center point
-    zoom: 2, // Set an initial zoom level
-    minZoom: 2, // Set minimum zoom-out level
+    zoomControl: false,
+    center: hashParams ? [hashParams.lat, hashParams.lng] : defaultCenter,
+    zoom: hashParams ? hashParams.zoom : defaultZoom,
+    minZoom: 2,
     maxBounds: [
-      [-90, -180], // Southwest corner of the bounding box
-      [90, 180], // Northeast corner of the bounding box
+      [-90, -180],
+      [90, 180],
     ],
   });
 
   L.control.zoom({ position: "topright" }).addTo(map);
+
+  map.on("moveend", () => {
+    const center = map.getCenter();
+    updateHash(center.lat, center.lng, map.getZoom());
+  });
 
   L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", {
     attribution:
