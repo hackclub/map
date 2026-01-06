@@ -41,8 +41,18 @@
 <body>
   <div style="position: absolute; bottom: 10px; left: 10px; color: white; z-index: 999; background: #ec3750; padding: 20px 20px; border-radius: 16px; margin-right: 10px;">
     <h2 style="margin-block-start: 0em; margin-block-end: 0em;">The Hack Club Map</h2>
-    <p style="margin-block-start: 0.4em; margin-block-end: 0em;">Add your club using <b><a style="color: white;" href="https://leaders.hackclub.com" target="_blank">The Leaders Portal</a></p>
+    <p id="overlay-text" style="margin-block-start: 0.4em; margin-block-end: 0em;">Add your club using <b><a style="color: white;" href="https://leaders.hackclub.com" target="_blank">The Leaders Portal</a></b></p>
   </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const mode = params.get('mode');
+    const overlayText = document.getElementById('overlay-text');
+    if (mode === 'signin') {
+      overlayText.innerHTML = 'Sign in to manage your club';
+    } else if (mode === 'manage') {
+      overlayText.innerHTML = 'Manage your club in the <b><a style="color: white;" href="https://leaders.hackclub.com/my-club" target="_blank">My Club Page</a></b>';
+    }
+  </script>
   <div class="flag" alt="Hack Club"></div>
   <club-map></club-map>
 </body>
