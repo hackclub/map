@@ -9,11 +9,11 @@
     "add-lat-long": "node script/add-lat-long.js"
   },
   "dependencies": {
-    "airtable": "^0.11.6",
+    "airtable": "^0.12.2",
     "bottleneck": "^2.19.5",
-    "leaflet": "^1.9.3",
-    "node-fetch": "^3.3.0",
-    "uhtml": "^3.1.0"
+    "leaflet": "^1.9.4",
+    "node-fetch": "^3.3.2",
+    "uhtml": "^3.2.2"
   },
   "devDependencies": {
     "vite": "^6.4.2"
