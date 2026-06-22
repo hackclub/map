@@ -48,8 +48,13 @@
     const mode = params.get('mode');
     const overlayText = document.getElementById('overlay-text');
     const hideBanner = params.get('banner') === 'false' || params.has('hideBanner');
+    const smallBanner = params.get('banner') === 'small' || params.has('smallBanner');
+    const overlayBanner = document.getElementById('overlay-banner');
     if (hideBanner) {
-      document.getElementById('overlay-banner').style.display = 'none';
+      overlayBanner.style.display = 'none';
+    } else if (smallBanner) {
+      overlayBanner.style.transform = 'scale(0.6)';
+      overlayBanner.style.transformOrigin = 'bottom left';
     }
     if (mode === 'signin') {
       overlayText.innerHTML = 'Sign in to manage your club';
