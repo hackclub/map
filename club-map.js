@@ -76,7 +76,10 @@ const onConnected = (host) => {
       });
 
       let marker = new L.marker([x.venue_lat_fuzz, x.venue_lng_fuzz], { icon }).addTo(map);
-      marker.bindPopup(`<b>${x?.club_name}</b>`);
+      const websiteLink = x?.club_website
+        ? `<br/><a href="${x.club_website}" target="_blank" rel="noopener noreferrer">View website</a>`
+        : "";
+      marker.bindPopup(`<b>${x?.club_name}</b>${websiteLink}`);
     });
   })();
 };
