@@ -16,6 +16,6 @@
     "uhtml": "^3.2.2"
   },
   "devDependencies": {
-    "vite": "^6.4.2"
+    "vite": "^6.4.3"
   }
 }
